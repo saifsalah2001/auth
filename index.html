@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>الدعم الفني - NUKHBA</title>
-  <!-- استدعاء خط Unigeo من Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Unigeo:wght@700&display=swap" rel="stylesheet">
+  <title>الدعم الفني</title>
+  <!-- استدعاء خط Roboto من Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap" rel="stylesheet">
 
   <style>
-    /* 🎨 ألوان الثيم */
+    /* 🎨 الألوان */
     :root {
       --main-dark: #0a445e;
       --main-deep: #002b4d;
@@ -19,21 +19,21 @@
 
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background: linear-gradient(135deg, var(--light), var(--gray));
       min-height: 100vh;
       display: flex;
       flex-direction: column;
     }
 
-    /* 🔝 الشريط العلوي */
+    /* 🔝 شريط علوي زجاجي شفاف */
     header {
       backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(14px);
-      background: rgba(255, 255, 255, 0.25);
+      background: rgba(255, 255, 255, 0.25); /* شفافية أعلى */
       border-bottom: 1px solid rgba(255,255,255,0.2);
       color: var(--main-deep);
-      padding: 12px 25px;
+      padding: 10px 25px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -42,10 +42,24 @@
       z-index: 1000;
     }
 
-    /* شعار نصي بخط Unigeo */
+    /* حاوية الشعار + الصورة */
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 10px; /* المسافة بين الصورة والنص */
+    }
+
+    /* حجم الصورة */
+    .logo-img {
+      width: 120px;   /* عرض الصورة */
+      height: 70px;  /* ارتفاع الصورة */
+      object-fit: contain;
+    }
+
+    /* شعار نصي */
     .logo {
-      font-family: "Unigeo", sans-serif;
-      font-size: 32px;
+      font-family: "Roboto", sans-serif;
+      font-size: 30px;
       font-weight: 700;
       letter-spacing: 2px;
       color: var(--main-deep);
@@ -77,9 +91,9 @@
 
     h1 {
       text-align: center;
-      margin-bottom: 35px;
+      margin-bottom: 30px;
       color: var(--main-deep);
-      font-size: 28px;
+      font-size: 26px;
     }
 
     /* 📦 شبكة المشاكل */
@@ -140,9 +154,12 @@
   </style>
 </head>
 <body>
-  <!-- 🔝 الشريط العلوي -->
+  <!-- 🔝 شريط علوي -->
   <header>
-    <div class="logo">Nukhba</div>
+    <div class="logo-container">
+      <img src="download.png" alt="شعار صغير" class="logo-img">
+      <div class="logo">NUKHBA</div>
+    </div>
     <nav>
       <a href="#about">التعريف بنا</a>
       <a href="#support">الدعم الفني</a>
@@ -168,14 +185,14 @@
         <a href="diagnose_payment.html">💳 مشكلة في الدفع</a>
       </div>
       <div class="problem-card">
-        <a href="https://www.youtube.com/watch?v=nJxVkyiBUgI&list=RDTYnLoyJZa48&index=16">👤 مشكلة في الحساب</a>
+        <a href="https://imagecolorpicker.com/ar">👤 مشكلة في الحساب</a>
       </div>
     </div>
   </main>
 
-  <!-- ⬇️ التذييل -->
+  <!-- ⬇️ تذييل -->
   <footer>
-    &copy; 2025 شركة NUKHBA - جميع الحقوق محفوظة
+    &copy; 2025 شركة الاتصالات - جميع الحقوق محفوظة
   </footer>
 </body>
 </html>
