@@ -351,10 +351,10 @@ justify-content: center;
 
   <main>
     <img src="callc.jpg" alt="صورة رئيسية" class="main-image">
-    <h1>عناوين المشاكل</h1>
+    <h1>ISSUE</h1>
 
     <div class="problems-grid">
-      <a href="https://ar.wikihow.com/%D8%A5%D8%B9%D8%AF%D8%A7%D8%AF-%D8%B4%D8%A8%D9%83%D8%A9-%D8%AE%D8%A7%D8%B5%D8%A9">
+      <a href="https://ar.wikihow.com/%D8%A5%D8%B9%D8%AF%D8%A7%D8%AF-%D8%B4%D8%A8%D9%83%D8%A9-%D8%AE%D8%A7%D8%B5%D8%A9" class="delayed-link">
         <button class="animated-button">
           <svg viewBox="0 0 24 24" class="arr-2"><path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path></svg>
           <span class="text"> مشكلة في الإنترنت</span>
@@ -402,13 +402,25 @@ justify-content: center;
   </main>
 
   <footer>
-    &copy; 2025 شركة الاتصالات - جميع الحقوق محفوظة
+    &copy; 2025 شركة النخبة - جميع الحقوق محفوظة
   </footer>
 
   <script>
     window.addEventListener("load", function() {
        setTimeout(() => { document.getElementById("loader").style.display = "none"; }, 1000);
     });
+    
+    
+  document.querySelectorAll('.delayed-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault(); // يمنع الانتقال مباشرة
+      const href = this.getAttribute('href'); // يخزن الرابط
+      // إضافة تأخير 1 ثانية (1000 ملي ثانية)
+      setTimeout(() => {
+        window.location.href = href;
+      }, 600);
+    });
+  });
   </script>
 </body>
 </html>
